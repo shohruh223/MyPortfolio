@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>My Portfolio</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="{% static 'app/assets/vendors/themify-icons/css/themify-icons.css' %}">
+    <!-- Bootstrap + Meyawo main styles -->
+    <link rel="stylesheet" href="{% static 'app/assets/css/meyawo.css' %}">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    {% include 'app/navbar.html' %}<!-- End of Page Navbar -->
+
+    <!-- page header -->
+    <header id="home" class="header">
+                    <div class="about">
+                <div class="about-img-holder">
+                    <img src="{{ project.image.url }}" class="about-img"
+                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates,
+                        Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                </div>
+                <div class="about-caption">
+                    <p class="section-subtitle">Who Am I ?</p>
+                    <h2 class="section-title mb-3">{{ project.title }}</h2>
+                    <p>
+                        {{ project.text }}
+                    </p>
+                    <a href="{{ project.link }}" class="btn-rounded btn btn-outline-primary mt-4">Project link</a>
+                </div>
+            </div><!-- end of about wrapper -->
+    </header><!-- end of page header -->
+
+
+
+
+    <!-- footer -->
+    {% include 'app/footer.html' %}
+
+    <!-- core  -->
+    <script src="{% static 'app/assets/vendors/jquery/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'app/assets/vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="{% static 'app/assets/vendors/bootstrap/bootstrap.affix.js' %}"></script>
+
+    <!-- Meyawo js -->
+    <script src="{% static 'app/assets/js/meyawo.js' %}"></script>
+
+</body>
+
+</html>
