@@ -61,7 +61,10 @@
                         Even after spending so many years in another sphere, I am glad that I was not afraid to start
                         learning Software Engineering. This is the sign of how serious I am about Software Engineering
                     </p>
-                    <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
+                    <a href="{% static 'app/assets/imgs/Shohruh Abdurahmon.pdf' %}" id="down" download/>
+                            <button class="btn-rounded btn btn-outline-primary mt-4"
+                                    onclick="document.getElementById('down').clisk()">Download CV</button>
+                    </a>
                 </div>
             </div><!-- end of about wrapper -->
         </div><!-- end of container -->
@@ -249,14 +252,7 @@
     <!-- Meyawo js -->
     <script src="{% static 'app/assets/js/meyawo.js' %}"></script>
 
-    <script>
-      const downloadButton = document.querySelector('.btn-download');
-      downloadButton.addEventListener('click', () => {
-        // Add your download logic here
-        // For example, you can use the 'download' attribute to specify the file URL
-        downloadButton.setAttribute('download', {% static 'app/assets/imgs/Shohruh Abdurahmon.pdf' %});
-      });
-    </script>
+
 
 </body>
 
